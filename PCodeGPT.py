@@ -16,6 +16,8 @@ import os
 gpt_api_key = os.getenv("OPENAI_API_KEY")
 if not gpt_api_key:
     gpt_api_key = ''
+    if len(gpt_api_key) == 0:
+        print('[-] 请输入 OPENAI_API_KEY')
 gpt_model = 'gpt-3.5-turbo'
 gpt_base_url = ''
 gpt_proxy = None
